@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Desktops";
+    Layout = "_AdLayout";
+}
+
+<h1>Desktops</h1>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Desktop Name</th>
+            <th>Price</th>
+            <th>RAM</th>
+            <th>Screen</th>
+            <th>Weight</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Desktop rig in Model)
+        {
+
+
+            <tr>
+                <td>@rig.Name</td>
+                <td>@($"{rig.Price:C2}")</td>
+                <td>@rig.RAM</td>
+                <td>@rig.Screen</td>
+                <td>@rig.Weight</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
